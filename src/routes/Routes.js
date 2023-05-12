@@ -5,10 +5,11 @@ import Register from "../screens/Register";
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
 
+
 const Stack = createNativeStackNavigator()
 
 
-export default function Login(){
+export default function Routes(){
     return(
         <Stack.Navigator>
 
