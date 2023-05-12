@@ -4,6 +4,7 @@ import Login from "../screens/Login";
 import Register from "../screens/Register";
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
+import RecoveryPass from "../screens/RecoveryPass";
 
 
 const Stack = createNativeStackNavigator()
@@ -40,6 +41,12 @@ export default function Routes(){
             <Stack.Screen
                 name="Profile"
                 component={Profile}
+                options={{headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="Recovery"
+                component={RecoveryPass}
                 options={{headerShown: false}}
             />
 

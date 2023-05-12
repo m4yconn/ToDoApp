@@ -1,6 +1,6 @@
 // Firabase
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyBx4CzfomChzMhryupuHwREECyI6IKB8_E",
   authDomain: "todo-f4c26.firebaseapp.com",
   projectId: "todo-f4c26",
