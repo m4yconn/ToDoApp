@@ -1,9 +1,10 @@
 import { useState, useEffect} from 'react';
 import {Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
-import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
+import {getAuth, createUserWithEmailAndPassword, updateProfile, ProviderId} from 'firebase/auth'
 import { useNavigation } from "@react-navigation/native";
 import {initializeApp} from 'firebase/app'
 import { firebaseConfig } from '../../../firabase-config';
+import { getFirestore, collection, addDoc} from "firebase/firestore";
 import { AntDesign } from '@expo/vector-icons'; 
 
 
@@ -11,7 +12,9 @@ export default function Register(){
 
     const navigation = useNavigation()
     const app = initializeApp(firebaseConfig)
+    const db = getFirestore(app)
     const auth = getAuth(app);
+
 
     const [login, setLogin] = useState(false)
     const [message, setMessage] = useState("")
@@ -22,6 +25,7 @@ export default function Register(){
     const signUp = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
+            
             setLogin(true)
 
         })
@@ -37,7 +41,12 @@ export default function Register(){
             updateProfile(auth.currentUser, {
                 displayName: username, photoURL: "https://is4-ssl.mzstatic.com/image/thumb/Purple/v4/15/2c/e7/152ce763-aa06-05f4-7e9c-3e2480262156/source.icns/512x512bb.png"
               }).then(() => {
-                navigation.navigate("Profile")
+                addDoc(collection(db, "users"), {
+                    name: username,
+                    email: email,
+                    tasks: []
+                  });
+                navigation.navigate("Home")
               }).catch((error) => {
                 console.log(error.message)
               })

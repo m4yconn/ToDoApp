@@ -17,7 +17,7 @@ export default function TaskInput(props){
             <TouchableOpacity
                 onPress = {props.onPress}
             >
-                <Ionicons name="add-circle" size={40} color="#8b008b" />
+                <Ionicons name="add-circle" size={40} color="#251180" />
             </TouchableOpacity>
         </View>
     );
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         fontFamily: 'courier',
         marginHorizontal: 10,
         borderBottomWidth: 3,
-        borderColor: '#8b008b',
+        borderColor: '#251180',
         fontSize: 20,
         width: '75%'
     },

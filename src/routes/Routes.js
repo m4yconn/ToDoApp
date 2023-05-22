@@ -14,15 +14,17 @@ export default function Routes(){
     return(
         <Stack.Navigator>
 
-            <Stack.Screen
-                name="Home"
-                component={Home}
-                options={{headerShown: false}}
-            />
+            
 
             <Stack.Screen
                 name="InitialPage"
                 component={InitialPage}
+                options={{headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="Home"
+                component={Home}
                 options={{headerShown: false}}
             />
 

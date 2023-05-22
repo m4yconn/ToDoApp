@@ -1,4 +1,4 @@
-// Firabase
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBx4CzfomChzMhryupuHwREECyI6IKB8_E",

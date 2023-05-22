@@ -106,7 +106,13 @@ export default function Profile(){
             </View>
 
             </View>
-            
+
+                <BtnState
+                color = "#251180"
+                text = "HOME"
+                onPress = {() => {navigation.navigate("Home")}}
+                />
+
 
                 <BtnState
                 color = {verified.color}
@@ -124,6 +130,7 @@ export default function Profile(){
                 
                 />
 
+                
                 <BtnState
                 color = "#251180"
                 text = "CHANGE PASSWORD"

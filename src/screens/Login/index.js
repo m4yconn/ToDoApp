@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState, useEffect} from 'react'; 
 import {Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
 import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
 import { useNavigation } from "@react-navigation/native";
@@ -6,6 +6,10 @@ import {initializeApp} from 'firebase/app'
 import { firebaseConfig } from '../../../firabase-config';
 import { AntDesign } from '@expo/vector-icons'; 
 
+
+/**import { collection, query, where, getDocs } from "firebase/firestore";
+
+/ */
 
 export default function Login(){
 
@@ -20,7 +24,7 @@ export default function Login(){
     const signIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            navigation.navigate("Profile")
+            navigation.navigate("Home")
         })
         .catch(error => {
             setMessage(error.code.slice(5).replace("-", " "))

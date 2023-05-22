@@ -8,7 +8,7 @@ export default function Topo(props){
 
             <View style={styles.boxTopo}>
                 <TouchableOpacity
-                    onPress={props.OnPress2}
+                    onPress={props.onPress2}
                 >
                     <Feather name="user" size={35} color="white" />
                 </TouchableOpacity>
