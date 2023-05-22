@@ -15,6 +15,12 @@ export default function Routes(){
         <Stack.Navigator>
 
             <Stack.Screen
+                name="Home"
+                component={Home}
+                options={{headerShown: false}}
+            />
+
+            <Stack.Screen
                 name="InitialPage"
                 component={InitialPage}
                 options={{headerShown: false}}
@@ -32,11 +38,6 @@ export default function Routes(){
                 options={{headerShown: false}}
             />
 
-            <Stack.Screen
-                name="Home"
-                component={Home}
-                options={{headerShown: false}}
-            />
 
             <Stack.Screen
                 name="Profile"

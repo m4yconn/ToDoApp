@@ -20,7 +20,7 @@ export default function Login(){
     const signIn = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            navigation.navigate("Home")
+            navigation.navigate("Profile")
         })
         .catch(error => {
             setMessage(error.code.slice(5).replace("-", " "))

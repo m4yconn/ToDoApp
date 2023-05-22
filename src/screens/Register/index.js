@@ -37,7 +37,7 @@ export default function Register(){
             updateProfile(auth.currentUser, {
                 displayName: username, photoURL: "https://is4-ssl.mzstatic.com/image/thumb/Purple/v4/15/2c/e7/152ce763-aa06-05f4-7e9c-3e2480262156/source.icns/512x512bb.png"
               }).then(() => {
-                navigation.navigate("Home")
+                navigation.navigate("Profile")
               }).catch((error) => {
                 console.log(error.message)
               })
