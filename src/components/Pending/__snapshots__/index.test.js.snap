@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot correto 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#dcdcdc",
+      "borderColor": "#8b008b",
+      "borderRadius": 5,
+      "borderWidth": 2,
+      "flexDirection": "center",
+      "marginBottom": 10,
+      "padding": 5,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontFamily": "courier",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginLeft": 20,
+        "textDecorationLine": "line-through",
+      }
+    }
+  />
+</View>
+`;

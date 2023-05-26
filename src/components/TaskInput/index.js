@@ -1,6 +1,5 @@
 import {View, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
 
 export default function TaskInput(props){  
 
