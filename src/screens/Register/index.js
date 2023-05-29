@@ -4,7 +4,7 @@ import {getAuth, createUserWithEmailAndPassword, updateProfile, ProviderId} from
 import { useNavigation } from "@react-navigation/native";
 import {initializeApp} from 'firebase/app'
 import { firebaseConfig } from '../../../firabase-config';
-import { getFirestore, collection, addDoc} from "firebase/firestore";
+import { getFirestore, collection, setDoc, doc} from "firebase/firestore";
 import { AntDesign } from '@expo/vector-icons'; 
 
 
@@ -39,11 +39,10 @@ export default function Register(){
         () => {
             if(login == true){
             updateProfile(auth.currentUser, {
-                displayName: username, photoURL: "https://is4-ssl.mzstatic.com/image/thumb/Purple/v4/15/2c/e7/152ce763-aa06-05f4-7e9c-3e2480262156/source.icns/512x512bb.png"
+                displayName: username, photoURL: "https://is4-ssl.mzstatic.com/image/thumb/Purple/v4/15/2c/e7/152ce763-aa06-05f4-7e9c-3e2480262156/source.icns/512x512bb.png", 
               }).then(() => {
-                addDoc(collection(db, "users"), {
+                setDoc(doc(db, "users", email), {
                     name: username,
-                    email: email,
                     tasks: []
                   });
                 navigation.navigate("Home")

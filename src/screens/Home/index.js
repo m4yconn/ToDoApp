@@ -28,7 +28,6 @@ export default function Home(){
 
              getDocs(q).then(querySnapshot => {
                  querySnapshot.forEach((doc) => {
-                     // doc.data() is never undefined for query doc snapshots
                  console.log(doc.data().tasks)
                  setPending(doc.data().tasks)
              })
